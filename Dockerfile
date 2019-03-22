@@ -21,4 +21,6 @@ RUN pip install -r requirements.txt
 RUN mkdir $HOME/DREAMPlace/build
 WORKDIR $HOME/DREAMPlace/build
 RUN cmake -DCMAKE_INSTALL_PREFIX=/home .. && make && make install
+WORKDIR $HOME/DREAMPlace/
 
+ENV PYTHONPATH=/home/DREAMPlace/dreamplace
